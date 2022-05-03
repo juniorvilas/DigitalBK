@@ -1,0 +1,12 @@
+@use '../../assets/sass/_mixins'
+
+footer
+    & span
+        @include mixins.mobile
+            font-size: 1rem
+            font-weight: 600
+    background-color: var(--primary-color)
+
+    & ul li
+        @include mixins.mobile
+            display: none  

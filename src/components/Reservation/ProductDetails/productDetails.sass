@@ -1,0 +1,112 @@
+@use '../../../assets/sass/_mixins'
+
+.booking-details
+    margin: 2rem auto
+    box-shadow: 0 4px 5px -3px rgba(var(--dark-color-2-rgb), .5)
+    border-radius: .6rem
+    background-color: #fff
+    max-width: 375px
+    @include mixins.tablet
+        display: flex
+        flex-direction: row
+        gap: 2rem
+        max-width: 750px
+    @include mixins.desktop
+        flex-direction: column
+        gap: 0
+    &__img
+        @include mixins.tablet
+            margin-left: 1.5rem
+        @include mixins.desktop
+            margin-left: 0
+
+        & img
+            width: 100%
+            height: 250px
+            @include mixins.tablet
+                border-radius: .7rem
+            @include mixins.desktop
+                border-radius: 0
+
+        & h5
+            font-weight: 600
+            color: var(--dark-color-1)
+            padding: 2rem 1rem 1rem
+
+    &__location
+        font-size: .9rem
+        font-weight: 600
+        padding-bottom: 1rem
+        display: inline-block
+        &::before
+            content: url("https://pi-t2-g3.s3.amazonaws.com/icons/pin_location.svg")
+            margin-left: 2rem
+            margin-right: .5rem
+    &__info
+        position: relative
+        display: flex
+        flex-direction: column
+        @include mixins.tablet
+            width: 300px
+            max-width: 400px
+        @include mixins.desktop
+            width: 100%
+        & h5
+            padding-left: 2rem
+            @include mixins.desktop
+                width: 70%
+        & button
+            width: 90%
+            margin: 2rem .5rem 1rem
+            align-self: center
+
+        & input[type="number"]
+            background-color: #fff
+            border: 1px solid var(--light-color)
+    &__qntyPersons
+        width: 20rem
+        @include mixins.tablet
+            width: 15rem
+        display: flex
+        flex-direction: column
+        margin: 0 auto
+        align-items: center
+        & span
+            font-size: 1rem
+            margin: 1rem 1rem
+
+    &__name
+        font-size: 1rem
+        color: var(--dark-color-1)
+        display: inline-block
+        padding: 2rem 2rem 0
+
+    &__price
+        /* position: absolute */
+        // top: 20px
+        right: 0
+        text-align: start
+        font-size: .9rem
+        color: var(--dark-color-1)
+        padding: 1rem 2rem 0
+        & span
+            // font-size: .9rem
+            display: block
+
+    &__stars
+        margin: .5rem 2rem
+
+    &__checkin,
+    &__checkout,
+    &__amount
+        display: flex
+        justify-content: space-between
+        font-size: 1rem
+        margin: 0 .4rem
+        padding-top: .5rem
+        padding-bottom: 1rem
+        border-bottom: 1px solid rgba(var(--dark-color-2-rgb), .3)
+        & span
+            margin: .5rem
+    &__checkin
+        border-top: 1px solid rgba(var(--dark-color-2-rgb), .3)

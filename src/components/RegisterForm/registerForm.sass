@@ -1,0 +1,42 @@
+@use '../../assets/sass/mixins'
+
+.form-register
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-flow: column
+    margin: 0 auto
+    @include mixins.tablet
+        width: 346px
+    @include mixins.desktop
+        width: 448px
+    & button
+        margin: 1.5rem
+        width: inherit
+        
+.form-register__title
+    color: var(--primary-color)
+    font-size: 24px
+    text-align: center
+    margin-top: 7rem
+    padding-bottom: 9px
+    font-weight: bold
+    line-height: 28px
+    @include mixins.tablet
+        padding-bottom: 59px
+    @include mixins.desktop
+        padding-bottom: 9px
+
+.box-input__desktop
+    width: 100%
+    display: flex
+    flex-direction: column
+    @include mixins.desktop
+        flex-direction: row
+    align-items: center
+    gap: 1rem
+    & input
+        @include mixins.desktop
+            width: 100%
+.box-button-register
+    margin-top: 30px

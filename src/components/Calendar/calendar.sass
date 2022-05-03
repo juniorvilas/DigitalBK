@@ -1,0 +1,111 @@
+@use '../../assets/sass/_mixins'
+
+.calendario
+    width: 735px
+    @include mixins.mobile
+        width: 280px
+    height: 400px
+    background-color: rgba(#fff, .6)
+    position: relative
+    border-radius: .7rem
+    display: flex
+    justify-content: center
+    box-shadow: 0 4px 5px -3px rgba(var(--dark-color-2-rgb), .5)
+    z-index: 20
+    &__this-month
+        width: 50%
+        border-right: 3px solid var(--light-color)
+        @include mixins.mobile
+            width: 100%
+            border-right: none
+
+    &__next-month
+        width: 50%
+        @include mixins.mobile
+            display: none
+
+    &__this-month,
+    &__next-month
+        padding: 0 .3rem
+
+    & h5
+        text-align: center
+        padding: 1.2rem .5rem 0
+        &::first-letter
+            text-transform: uppercase
+
+    &__titulo-dias,
+    &__dias
+        display: flex
+        font-size: .8rem
+
+    &__dias
+        flex-wrap: wrap
+        
+    &__dia
+        width: calc(100% / 7)
+        padding: .8rem 0
+        border-radius: 50%
+        transition: all .1s
+        cursor: pointer
+        border: 1px solid transparent
+
+        &:hover
+            background-color: rgba(var(--dark-color-1-rgb), .2)
+
+    &__dia-semana
+        margin: 1rem 0
+        width: calc(100% / 7)
+
+    &__dia-semana,
+    &__dia
+        text-align: center
+
+    &__btn
+        border: none
+        padding: .5rem 1rem
+        font-size: 1rem
+        color: var(--dark-color-1)
+        background-color: transparent
+        border-radius: 50%
+        position: absolute
+        top: 2rem
+        transform: translateY(-50%)
+        &:hover
+            background-color: rgba(var(--dark-color-1-rgb), .2)
+
+    &__previous
+        left: 2rem
+
+    &__next
+        right: 2rem
+
+.past-days
+    color: var(--dark-color-2)
+    opacity: .3
+    pointer-events: none
+
+.reserved
+    color: var(--primary-color)
+    pointer-events: none
+
+.days-between
+    border-radius: 0
+    background-color: rgba(var(--primary-color-rgb), .2)
+
+
+.blank-space
+    pointer-events: none
+
+.calendario-title
+    font-weight: 600
+    color: var(--dark-color-1)
+
+.selected-day
+    background-color: rgba(var(--primary-color-rgb), .7)
+    
+.checkin
+    border-radius: 10% 0 0 10% 
+    
+.checkout
+    border-radius: 0 10% 10% 0

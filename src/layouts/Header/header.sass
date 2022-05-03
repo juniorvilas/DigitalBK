@@ -1,0 +1,48 @@
+@use '../../assets/sass/mixins'
+    
+    
+.header
+    padding: .5rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: #FFF
+    box-shadow: 0px 5.4px 8.9px -1px rgba(0, 0, 0, 0.1), 0px 14.9px 26.2px -1px rgba(0, 0, 0, 0.04), 0px 26px 67px -1px rgba(0, 0, 0, 0.017)
+    &__btn-container
+        display: flex
+    &__logo
+        margin: .3rem 0 .3rem .7rem
+        
+        @include mixins.tablet
+            margin: .3rem auto .3rem .7rem
+    &__bar
+        font-size: 1.9rem
+        margin: 1rem
+        color: var(--primary-color)
+        cursor: pointer
+        @include mixins.tablet
+            display: none
+    & button
+        &:last-child
+            margin-left: 1rem
+        @include mixins.mobile
+            display: none
+
+.div-user-info
+    display: flex
+    gap: 1rem
+    align-items: center
+    justify-content: center
+.btn-create
+    padding: .5rem 1rem
+    border: 1px solid transparent
+    background-color: var(--primary-color)
+    border-radius: .4rem
+    color:  var(--light-color)
+    font-weight: 600
+    transition: all .2s
+    font-size: .8rem
+    &:hover
+        border: 1px solid var(--primary-color)
+        background-color: transparent
+        color: var(--primary-color)

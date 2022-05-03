@@ -1,0 +1,59 @@
+@use '../../assets/sass/_mixins'
+    
+    
+.titulo
+    font-size: 24px
+    font-weight: bold
+    line-height: 28px    
+    margin: 2rem 0
+    text-align: center
+    color: var(--primary-color)
+
+.container-categorias
+    padding-top: 13px 
+    padding-left: 40px
+    padding-right: 40px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    gap: 2rem
+    & .titulo
+        padding-bottom: 9px
+
+.categorias
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    gap: 2.5rem
+    animation: categories-entry .2s
+        
+.btn-limpar-filtro
+    border: none
+    outline: 1px solid var(--primary-color)
+    background-color: var(--primary-color)
+    color: var(--light-color)
+    font-size: .9rem
+    border-radius: .4rem
+    padding: .2rem 1rem
+    transition: all .1s
+    align-self: center
+
+    &:hover
+        background-color: transparent
+        color: var(--primary-color)
+
+    &:disabled
+        filter: grayscale(50%)
+        &:hover
+            background-color: var(--primary-color)
+            color: var(--light-color)
+
+    
+@keyframes categories-entry
+    0%
+        opacity: 0
+    50%
+        opacity: .5
+    100%
+        opacity: 1

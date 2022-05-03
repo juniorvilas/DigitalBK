@@ -1,0 +1,129 @@
+@use '../../assets/sass/_mixins'
+
+
+.product
+    background-color: #FFF
+    border-radius: .5rem
+    justify-self: center
+    width: 100%
+    max-width: 360px
+    box-shadow: 0px 12px 10px -3px rgba(0,0,0,0.1)
+    position: relative
+    @include mixins.tablet
+        display: flex
+        max-width: 690px
+        min-height: 283px
+
+    &__img
+        position: relative
+        width: 100%
+        @include mixins.tablet  
+            max-width: calc(100% / 2.2)
+        @include mixins.tablet
+            width: 75%
+        & img
+            width: 100%
+            height: 100%
+            max-height: 100%
+            object-fit: cover
+            border-radius: .5rem .5rem 0 0
+            @include mixins.tablet
+                border-radius: .5rem 0 0 .5rem 
+                position: absolute
+                background-position: center
+    &__heartIcon
+        font-size: 1.2rem
+        color: var(--light-color)
+        position: absolute
+        top: 1rem
+        right: 1rem
+    
+    &__details
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: repeat(4, max-content)
+    &__title-category
+        grid-column: 1 / 2
+        display: flex
+        flex-direction: column
+        margin: .6rem 1.3rem
+        .product-category
+            font-size: .8rem
+            color: var(--dark-color-1)
+            width: max-content
+            text-transform: uppercase
+            font-weight: 600
+        .product-title
+            width: max-content
+            @include mixins.mobile
+                width: 100%
+            @include mixins.desktop
+                width: 90%
+            font-size: .91119rem
+            font-weight: 600
+    &__rating
+        margin: .6rem
+        display: flex
+        flex-direction: column
+        grid-column: 2 / 3
+        align-self: flex-end
+        text-align: right
+        & span
+            font-size: 1.2rem
+            padding: 0 .6rem
+            border-radius: .5rem
+            color: var(--light-color)
+            font-weight: 600
+            align-self: end
+            background-color: var(--dark-color-1)
+        & p
+            font-weight: 600
+            font-size: .8rem
+    &__location
+        font-size: .9rem
+        font-weight: 600
+        margin-left: .6rem
+        grid-row: 2 / 3
+        grid-column: 1 / -1
+        position: relative
+
+    &__price
+        font-size: .8rem
+        font-weight: 500
+        margin-left: .6rem
+        grid-column: 1 / -1
+        grid-row: 2 / 3
+        position: relative
+        justify-self: end
+        @include mixins.desktop
+            margin-right: .5rem
+        
+    &__features
+        font-size: 1.2rem
+        color: var(--dark-color-1)
+        gap: 1rem
+        margin: 0 1.3rem  
+        display: flex      
+    &__mapIcon
+        font-size: 1.2rem
+        color: var(--dark-color-1)
+        margin: 0 .7rem
+
+    &__description
+        grid-column: 1 / -1
+        text-align: justify
+        margin: .5rem 1.3rem
+        font-size: .8rem
+        max-width: 360px
+        color: var(--dark-color-1)
+    &__link
+        grid-column: 1 / -1
+        grid-row: 5 / -1
+        align-self: center
+        width: 90%
+        margin: .7rem auto
+        & button
+            width: 100%
+    &__icon
+        @include mixins.mobile
+            display: inline

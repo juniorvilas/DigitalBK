@@ -1,0 +1,20 @@
+.loading-text
+    display: flex
+    justify-content: center
+    padding-top: 5rem
+    & span
+        font-size: 2.5rem
+        text-align: center
+        background: linear-gradient(to right, var(--dark-color-1) 20%, var(--primary-color) 40%, var(--primary-color) 60%, var(--dark-color-1) 80%)
+        background-size: 200% auto
+        color: #000
+        background-clip: text
+        text-fill-color: transparent
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        animation: shining 1s linear infinite
+
+@keyframes shining
+    to 
+      background-position: 200% center
+    

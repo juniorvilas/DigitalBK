@@ -1,0 +1,66 @@
+@use '../../../assets/sass/mixins'
+    
+    
+%align-right
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+.adm          
+    font-size: 1rem
+    font-weight: 600 
+    margin-bottom: 0
+    padding: .5rem
+    
+.user-info    
+    @extend %align-right
+    gap: .5rem    
+    display: flex
+    align-items: center
+    @include mixins.mobile
+        position: absolute
+        bottom: .5rem
+        right: .5rem
+
+    @include mixins.tablet
+        flex-direction: row
+
+    &__img
+        width: 2.5rem
+        height: 2.5rem
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        font-size: 1.2rem
+        font-weight: 600
+        background-color: var(--dark-color-1)
+        color: var(--primary-color)
+        text-transform: uppercase
+    &__name
+        font-weight: 600
+        font-size: .9rem
+        @extend %align-right
+
+        
+        @include mixins.tablet
+            align-items: start
+
+    &__greetings
+        color: var(--light-color)
+        @include mixins.tablet
+            color: var(--primary-color)
+        
+    &__logout
+        font-size: 1.1rem
+        font-weight: 600
+        align-self: start
+        margin: 0 1.5rem 0 .7rem
+        display: none
+        cursor: pointer
+        padding: .2rem .4rem
+
+        @include mixins.tablet
+            display: block
+.div-user-info
+    @include mixins.mobile
+        display: none   

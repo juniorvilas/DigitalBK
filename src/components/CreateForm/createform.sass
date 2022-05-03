@@ -1,0 +1,150 @@
+@use '../../assets/sass/_mixins'   
+
+.div_create
+    background: var(--light-color)
+    padding-bottom: 100px
+    
+.div_titulo_adm
+    background: var(--dark-color-2)
+    height: 60px
+
+.titulo_adm
+    font-size: 24px
+    color: var(--light-color)
+    padding-top: 15px
+    margin-left: 40px
+    font-weight: 700
+
+.titulo_create
+    font-size: 24px
+    font-weight: 700
+    margin-left: 40px
+    margin-top: 40px
+    font-weight: 700
+    color: var( --dark-color-1)
+
+.create-form
+    border-radius: .6rem
+    padding-bottom: 100px
+    margin: 0 auto !important
+    box-shadow: 0 4px 5px -3px rgba(var(--dark-color-2-rgb), .5)
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-color: #fff
+    width: 95%
+    @include mixins.tablet
+        margin: 0
+        flex-direction: row
+        flex-wrap: wrap
+    @include mixins.desktop
+
+.item-form
+    width: 80%
+    @include mixins.tablet
+        width: calc(100% / 2)
+        padding: .5rem 1rem
+    & label
+        color: var(--dark-color-1)
+        font-size: .9rem
+        margin-top: .5rem
+    & input
+        margin: .5rem 0 1rem
+        width: 100%
+        font-size: .8rem
+        @include mixins.desktop
+            font-size: 1rem
+    & input:disabled
+        background-color: rgba(var(--light-color-rgb), .5)
+        
+.div-limite
+    width: calc(100% / 2.4)
+    display: inline-block
+    &:first-of-type
+        margin-right: 1rem
+
+
+.btn-search
+    background-color: transparent
+    border: none
+    font-size: 1.3rem
+    position: absolute
+    right: 2rem
+    top: 45%
+
+.btn-map
+    background-color: transparent
+    border: none
+    font-size: 1rem
+    position: absolute
+    right: 2rem
+    top: 50%
+    transition: scale .2s ease
+    &:hover
+        transform: scale(1.01)
+    &:disabled
+        cursor: not-allowed
+
+.description
+    width: 80%
+    .textarea
+        margin-top: .5rem
+        display: flex
+        height: 120px
+        width: 100%
+        font-size: 1rem
+
+    @include mixins.tablet
+        width: calc(100% / 1)
+        padding: .5rem 1rem
+    & label
+        color: var(--dark-color-1)
+        font-size: .9rem
+        margin-top: .5rem
+    & input
+        margin: .5rem 0 1rem
+        width: 100%
+        font-size: .8rem
+        @include mixins.desktop
+            font-size: 1rem
+            width: 100%
+.title_attribute
+    margin-top: 1rem
+    width: 100%
+    & p
+        margin-left: 15px
+        font-size: 20px
+        font-weight: 700
+        color: var(--dark-color-2)
+.select-atributo
+    margin: 0 auto
+    margin-top: 1rem
+    margin-bottom: 1rem
+    & label
+        justify-content: center
+        display: flex
+        font-size: 1rem
+        color: var(--primary-color)
+        font-weight: 700
+        margin-bottom: 1rem
+    &__all-features
+        font-size: 1rem
+        font-weight: 600
+        & img
+            width: 2rem
+            margin: 1rem
+
+.title_img
+    margin-top: 1rem
+    width: 100%
+    & p
+        margin-left: 15px
+        font-size: 20px
+        font-weight: 700
+        color: var(--dark-color-2)
+
+.btn-create-prod
+    margin: 0 auto
+    width: 35%
+    min-width: 200px
+    margin-top: 3rem

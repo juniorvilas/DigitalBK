@@ -1,0 +1,27 @@
+@use '../../../assets/sass/_mixins'
+
+.div_addImage
+    display: flex
+    width: 100%
+    flex-wrap: wrap
+    justify-content: center
+
+    margin-bottom: 1rem    
+    & button
+        border: none
+        background: none
+    & img
+        margin-top: 20px
+        cursor: pointer 
+
+.addImage
+    @include mixins.desktop
+        width: calc(100% / 2)
+    @include mixins.tablet
+        width: calc(100% / 2.2)
+    @include mixins.mobile
+         width: calc(100% / 1.1)     
+    & label        
+        color: var(--dark-color-1)
+        font-size: .9rem
+        margin-top: .5rem

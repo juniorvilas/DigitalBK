@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #F0572D;
+  --primary-color-rgb: 240, 87, 45;
+  --dark-color-1: #31363F;
+  --dark-color-1-rgb: 49, 54, 63;
+  --dark-color-2: #191B1D;
+  --dark-color-2-rgb: 25, 27, 29;
+  --light-color: #DFE4EA;
+  --light-color-rgb: 223, 228, 234;
+}
+
+.btn, .btn-transparent, .btn-filled {
+  padding: 0.7rem 3rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.2s all;
+}
+
+.btn-filled {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: 1px solid transparent;
+}
+.btn-filled:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-transparent {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+.btn-transparent:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+/*# sourceMappingURL=index.css.map */

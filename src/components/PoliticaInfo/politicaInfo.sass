@@ -1,0 +1,38 @@
+@use '../../assets/sass/_mixins'
+    
+.div_titulo-politica
+    border-bottom: 1px solid var(--primary-color)
+    padding-bottom: 1rem
+    
+.container_politica_flex
+    margin-top: 40px
+    padding-bottom: 6rem
+    display: grid    
+    grid-gap: 2rem
+    @include mixins.tablet
+        grid-template-columns: repeat(2, 1fr)
+    @include mixins.desktop
+        grid-template-columns: repeat(3, 1fr)
+
+.item_politica
+    .subtitulo_politica
+        color: var( --dark-color-1)
+        font-size: 20px
+        margin-left: 10px    
+        font-weight: 600
+        @include mixins.tablet
+            margin-left: 30px 
+        
+
+    & p
+        font-size: 14px
+        margin-left: 10px
+        @include mixins.tablet
+            margin-left: 30px   
+.titulo_politica
+    font-size: 24px                
+    margin-left: 10px 
+    margin-top: 30px
+    font-weight: bold
+    @include mixins.tablet
+            margin-left: 30px     

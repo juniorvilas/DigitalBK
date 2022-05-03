@@ -1,0 +1,47 @@
+@use '../../assets/sass/_mixins'
+
+.booking-reserva
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 1rem
+    background-color: rgba(var(--light-color-rgb), .5)
+    @include mixins.desktop
+        display: grid
+        padding: 4rem calc(100% / 12)
+        column-gap: 2rem
+        justify-content: center
+        grid-template-areas: "FORMULARIO DETALHES" "CALENDARIO DETALHES" "HORARIO DETALHES"
+    
+.booking-form-item
+    width: 90%
+    @include mixins.desktop
+        width: 100%
+        align-self: start
+    grid-area: FORMULARIO
+
+.booking-reserva-item
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    z-index: 0
+    @include mixins.desktop
+        align-items: start
+    grid-area: CALENDARIO
+    & h4
+        margin: 1rem 1rem 1.5rem
+        padding-left: calc(100% / 16)
+        @include mixins.desktop
+            padding-left: 0
+        width: 100%
+
+.booking-horario-item
+    grid-area: HORARIO
+    width: 90%
+    @include mixins.desktop
+        width: 100%
+.booking-details-item
+    width: 100%
+    align-self: start
+    grid-area: DETALHES

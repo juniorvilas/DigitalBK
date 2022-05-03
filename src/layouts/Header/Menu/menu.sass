@@ -1,0 +1,103 @@
+@use '../../../assets/sass/mixins'
+
+%menu-text
+    font-size: 1.2rem
+    font-weight: 600
+    color: var(--dark-color-1)
+    text-align: right
+    padding: 1rem
+    margin: .7rem
+    border: none
+    background-color: transparent
+    text-decoration: none
+
+    & > a
+        color: var(--dark-color-1)
+        text-decoration: none
+
+        &:hover 
+            text-decoration: underline
+    
+.menu
+    width: 100vw
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    transition: transform 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)
+    z-index: 1500
+    background-color: #FFF
+    @include mixins.tablet
+        display: none
+
+    &__span
+        font-size: 1.5rem
+        font-weight: 600
+        text-transform: uppercase
+        position: absolute
+        bottom: .5rem
+        right: 1.5rem
+        color: var(--light-color)
+
+    &__close
+        border: none
+        font-size: 2rem
+        font-weight: 600
+        background-color: transparent
+        color: var(--light-color)
+        position: absolute
+        left: 1rem
+        top: 1rem
+        z-index: 2
+        
+    &__logout
+        width: 95%
+        font-size: 1rem
+        margin: auto auto 0
+        text-align: right
+        padding-right: .5rem
+        border-bottom: 1px solid var(--dark-color-1)
+
+        & a
+            color: var(--primary-color)
+            text-decoration: none
+
+
+    &__div
+        background-color: var(--primary-color)
+        height: 35%
+        position: relative
+
+
+    &__create-account
+        @extend %menu-text
+        border-bottom: 1px solid var(--dark-color-2)
+
+    &__login
+        @extend %menu-text
+
+    &__create
+        @extend %menu-text
+    &__social
+        padding: 1rem
+        font-size: 2rem
+        color: var(--dark-color-2)
+        text-align: right
+ 
+        & *
+            margin: 0 .5rem 0 .5rem
+            cursor: pointer
+
+
+.hide 
+  transform: translateX(150vw)
+
+ 
+.show 
+  transform: translateX(0)
+  overflow: hidden
+
+.margin-top
+    margin-top: auto

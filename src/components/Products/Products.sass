@@ -1,0 +1,37 @@
+@use '../../assets/sass/_mixins'
+
+%fill
+    color: var(--dark-color-2)
+    background-color: var(--primary-color) !important
+
+h1
+    font-size: 24px
+    font-weight: bold
+    line-height: 28px    
+    margin: 2rem 0
+    color: var(--primary-color)
+
+.title-recommend
+    background-color: var(--light-color)
+    margin-top: 7rem
+    padding: 9px
+    text-align: center
+
+
+.container-products
+    background-color: var(--light-color)
+    padding: 1rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: start
+    gap: 1.5rem
+    padding-bottom: 10rem
+    @include mixins.tablet
+        flex-direction: row
+        flex-wrap: wrap
+.no-products
+    margin-top: 2rem
+    font-size: 1.5rem
+    color: var(--primary-color)
+    letter-spacing: .3rem

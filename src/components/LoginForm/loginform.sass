@@ -1,0 +1,75 @@
+@use '../../assets/sass/mixins'
+
+.form-login
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    @include mixins.desktop
+        width: calc(100% / 2)
+        margin: 0 auto
+
+    & label
+        display: block
+        text-align: left
+        font-size: 12px
+        font-weight: 600
+        line-height: 14px
+        padding-top: 9px
+        padding-bottom: 5px
+        color: #31363F
+
+    & button
+        margin: 1.5rem
+        width: inherit
+.item-form
+    position: relative
+
+.input
+    width: 300px
+    height: 40px
+    border-radius: .4rem
+    border: none
+    font-size: 12px
+    background: #FFFFFF
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15)
+    border-radius: 5px
+    padding-left: 13px
+    &:focus
+        outline-color: var(--primary-color)
+    @include mixins.tablet
+        width: 346px
+    @include mixins.desktop
+        width: 448px
+
+.password
+    letter-spacing: 2px
+    font-size: 12px
+    position: relative
+
+.eye-password
+    cursor: pointer
+    position: absolute
+    top: 45%
+    padding-top: 8px
+    transform: translateX(-40px)
+    width: 24px
+    height: auto
+
+.title-login
+    color: var(--primary-color)
+    font-size: 24px
+    text-align: center
+    padding-top: 32px
+    font-weight: bold
+    line-height: 28px
+
+.text-conta
+    font-size: 12px
+    font-weight: bold
+    text-align: center
+    @include mixins.mobile
+        margin-bottom: 7rem
+.link-reg
+    text-decoration: none
+

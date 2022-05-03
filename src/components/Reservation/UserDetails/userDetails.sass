@@ -1,0 +1,42 @@
+@use '../../../assets/sass/_mixins'
+.booking-form-title
+    text-align: center
+    padding-bottom: 0 
+    margin: 2rem
+    color: var(--dark-color-1)
+    font-weight: 600
+    @include mixins.tablet
+        text-align: left
+        margin: 1rem
+.booking-form
+    border-radius: .6rem
+    box-shadow: 0 4px 5px -3px rgba(var(--dark-color-2-rgb), .5)
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-color: #fff
+    width: 100%
+    @include mixins.tablet
+        margin: 0
+        flex-direction: row
+        flex-wrap: wrap
+    @include mixins.desktop
+        max-width: 735px
+        
+.item-form
+    width: 90%
+    @include mixins.tablet
+        width: calc(100% / 2)
+        padding: .5rem 1rem
+    & label
+        color: var(--dark-color-1)
+        font-size: .9rem
+        margin-top: .5rem
+    & input
+        margin: .5rem 0 1rem
+        width: 100%
+        font-size: .8rem
+        @include mixins.desktop
+            font-size: 1rem
+    & input:disabled 
+        background-color: rgba(var(--light-color-rgb), .5)

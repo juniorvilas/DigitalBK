@@ -1,0 +1,24 @@
+.delete-container
+    width: 100vw
+    height: 100vh
+    
+    background-color: rgba(var(--primary-color-rgb), .5)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    & input
+        background-color: var(--light-color)
+        font-size: 1rem    
+        border: none
+        height: 3rem
+        padding-left: 1rem
+    & button
+        margin-top: 1rem
+        border: none
+        font-size: 1rem
+        padding: .7rem 1.5rem
+        background-color: var(--light-color)
+        transition: all .2s
+        &:hover
+            background-color: rgba(var(--light-color-rgb), .6)
