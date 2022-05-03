@@ -1,5 +1,4 @@
 # Projeto Integrador - DigitalBK
-
 Projeto referente ao 4 bimestre do Curso Certified Tech Developer da Digital House.
 
 Projeto commitado no GitLab e depois transferido para o GitHub.
