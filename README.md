@@ -1,5 +1,4 @@
-# DigitalBK
-# Certified Tech Developer - Projeto Integrador - FrontEnd
+# Projeto Integrador - DigitalBK
 
 Projeto referente ao 4 bimestre do Curso Certified Tech Developer da Digital House.
 
