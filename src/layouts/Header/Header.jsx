@@ -46,7 +46,7 @@ const Header = () => {
               srcSet="https://pi-t2-g3.s3.amazonaws.com/icons/logo_subtitle.svg"
             />
             <img
-              src="https://pi-t2-g3.s3.amazonaws.com/icons/logo.svg"
+              src="../assets/logo.svg"
               alt="logo"
             />
           </picture>
