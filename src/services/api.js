@@ -83,7 +83,7 @@ import { useCookies } from "react-cookie";
   // }
 
 const api = axios.create({
-  baseURL: 'https://pi-t2-g3.herokuapp.com/',
+  baseURL: 'https://api-digital-booking.herokuapp.com/',
 });
 
 export default api;
