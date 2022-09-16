@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./header.sass";
 import UserInfo from "./UserInfo/UserInfo";
 import { useCookies } from "react-cookie";
+import Logo from "../../assets/images/logo.png";
 
 const Header = () => {
   const location = useLocation();
@@ -38,15 +39,15 @@ const Header = () => {
 
   return (
     <>
-      <header className="header">
+      <header className="header">        
         <Link to="/">
           <picture className="header__logo">
             <source
               media="(min-width:48em)"
-              srcSet="https://pi-t2-g3.s3.amazonaws.com/icons/logo_subtitle.svg"
+              srcSet={Logo}
             />
             <img
-              src="../assets/logo.svg"
+              src={Logo}
               alt="logo"
             />
           </picture>
